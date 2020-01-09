@@ -63,6 +63,21 @@ describe 'parser' do
     ['/contact', 2]
   ]
 
+  counted_ip = [
+    ['126.318.035.038', 2],
+    ['184.123.665.067', 4],
+    ['444.701.448.104', 3],
+    ['929.398.951.889', 2],
+    ['722.247.931.582', 1],
+    ['061.945.150.735', 1],
+    ['646.865.545.408', 1],
+    ['235.313.352.950', 1],
+    ['543.910.244.929', 2],
+    ['316.433.849.805', 3],
+    ['802.683.925.780', 2],
+    ['836.973.694.403', 1]
+  ]
+
   parser_object = ParserCounter.new(unsorted_array)
 
   it 'counts visits' do
@@ -87,5 +102,9 @@ describe 'parser' do
         parser_object.count_uniq_visits
       )
     ).to eq valid_unique_sorted
+  end
+
+  it 'counts visits by ip' do
+    expect(parser_object.count_ip).to eq counted_ip
   end
 end
