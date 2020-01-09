@@ -34,3 +34,8 @@ puts "\nSorted array of ip visits"
 sorted_ip_visits.each do |line|
   print "#{line.first} -> #{line.last} visits\n"
 end
+
+puts "\nSearch visits by ip"
+address = gets.chomp
+ip_output = parser_object.search_ip(address)
+ip_output.each { |ip| puts ip }
