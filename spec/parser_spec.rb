@@ -78,6 +78,10 @@ describe 'parser' do
     ['836.973.694.403', 1]
   ]
 
+  search_output = [
+    '/index', '/home', '/index'
+  ]
+
   parser_object = ParserCounter.new(unsorted_array)
 
   it 'counts visits' do
@@ -106,5 +110,9 @@ describe 'parser' do
 
   it 'counts visits by ip' do
     expect(parser_object.count_ip).to eq counted_ip
+  end
+
+  it 'searches for ip visits' do
+    expect(parser_object.search_ip).to eq search_output
   end
 end
