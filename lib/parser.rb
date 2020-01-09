@@ -20,4 +20,10 @@ class ParserCounter
   def sort_visits(arr)
     arr.sort_by { |a, b| [-b, a] }
   end
+
+  def count_ip
+    b = Hash.new(0)
+    @array.each { |line| b[line.last] += 1 }
+    b.to_a
+  end
 end
