@@ -63,8 +63,8 @@ describe 'parser' do
     ['/contact', 2]
   ]
 
-  parser_object = ParserCounter.new
+  parser_object = ParserCounter.new(unsorted_array)
   it 'counts visits' do
-    expect(parser_object.count_visits(unsorted_array)).to eq valid_array_counted
+    expect(parser_object.count_visits).to eq valid_array_counted
   end
 end
