@@ -78,6 +78,7 @@ describe 'parser' do
     ['836.973.694.403', 1]
   ]
 
+  address = '316.433.849.805'
   search_output = [
     '/index', '/home', '/index'
   ]
@@ -113,6 +114,6 @@ describe 'parser' do
   end
 
   it 'searches for ip visits' do
-    expect(parser_object.search_ip).to eq search_output
+    expect(parser_object.search_ip(address)).to eq search_output
   end
 end
