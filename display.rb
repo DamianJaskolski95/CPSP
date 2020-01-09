@@ -4,7 +4,7 @@ if ARGV.empty?
   file = File.open('webserver.log', 'r')
 else
   if File.exist?(ARGV[0])
-    file = File.open(ARGV[0])
+    file = File.open(ARGV[0], 'r')
   else
     puts 'File does not exist'
     return 0
@@ -26,7 +26,7 @@ end
 
 puts "\nSorted array of unique visits"
 sorted_uniq_visits.each do |line|
-  print "#{line.first} -> #{line.last} unique visits\n"
+  print "#{line.first} -> #{line.last} unique    visits\n"
 end
 
 puts "\n"
