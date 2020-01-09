@@ -20,9 +20,13 @@ sorted_visits = parser_object.sort_visits(parser_object.count_visits)
 sorted_uniq_visits = parser_object.sort_visits(parser_object.count_uniq_visits)
 
 puts 'Sorted array of visits'
-sorted_visits.each { |line| print "#{line.first} -> #{line.last}\n" }
+sorted_visits.each do |line|
+  print "#{line.first} -> #{line.last} visits\n"
+end
 
 puts "\nSorted array of unique visits"
-sorted_uniq_visits.each { |line| print "#{line.first} -> #{line.last}\n" }
+sorted_uniq_visits.each do |line|
+  print "#{line.first} -> #{line.last} unique visits\n"
+end
 
 puts "\n"
