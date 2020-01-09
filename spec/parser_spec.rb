@@ -60,4 +60,8 @@ describe 'parser' do
     ['/about/2', 2],
     ['/contact', 2]
   ]
+
+  it 'counts visits' do
+    expect(count_visits(unsorted_array)).to eq valid_array_counted
+  end
 end
