@@ -16,4 +16,8 @@ class ParserCounter
     @array.uniq.each { |line| b[line.first] += 1 }
     b.to_a
   end
+
+  def sort_visits(arr)
+    arr.sort_by { |a, b| [-b, a] }
+  end
 end
