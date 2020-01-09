@@ -26,4 +26,11 @@ class ParserCounter
     @array.each { |line| b[line.last] += 1 }
     b.to_a
   end
+
+  def search_ip(address)
+    arr = []
+    arra = @array.select { |s| s.include? address }
+    arra.each { |a| arr.push(a.first) }
+    arr
+  end
 end
