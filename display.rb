@@ -16,10 +16,13 @@ file.each { |line| splitted.push(line.split(' ')) }
 
 parser_object = ParserCounter.new(splitted)
 
-puts "Sorted array of visits"
-print parser_object.sort_visits(parser_object.count_visits)
+sorted_visits = parser_object.sort_visits(parser_object.count_visits)
+sorted_uniq_visits = parser_object.sort_visits(parser_object.count_uniq_visits)
+
+puts 'Sorted array of visits'
+sorted_visits.each { |line| print "#{line.first} -> #{line.last}\n" }
 
 puts "\nSorted array of unique visits"
-print parser_object.sort_visits(parser_object.count_uniq_visits)
+sorted_uniq_visits.each { |line| print "#{line.first} -> #{line.last}\n" }
 
 puts "\n"
