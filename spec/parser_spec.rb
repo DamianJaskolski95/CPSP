@@ -64,7 +64,12 @@ describe 'parser' do
   ]
 
   parser_object = ParserCounter.new(unsorted_array)
+
   it 'counts visits' do
     expect(parser_object.count_visits).to eq valid_array_counted
+  end
+
+  it 'counts unique' do
+    expect(parser_object.count_uniq_visits).to eq valid_unique_counted
   end
 end
