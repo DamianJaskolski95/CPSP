@@ -18,6 +18,7 @@ parser_object = ParserCounter.new(splitted)
 
 sorted_visits = parser_object.sort_visits(parser_object.count_visits)
 sorted_uniq_visits = parser_object.sort_visits(parser_object.count_uniq_visits)
+sorted_ip_visits = parser_object.sort_visits(parser_object.count_ip)
 
 puts 'Sorted array of visits'
 sorted_visits.each do |line|
@@ -26,7 +27,10 @@ end
 
 puts "\nSorted array of unique visits"
 sorted_uniq_visits.each do |line|
-  print "#{line.first} -> #{line.last} unique    visits\n"
+  print "#{line.first} -> #{line.last} unique visits\n"
 end
 
-puts "\n"
+puts "\nSorted array of ip visits"
+sorted_ip_visits.each do |line|
+  print "#{line.first} -> #{line.last} visits\n"
+end
