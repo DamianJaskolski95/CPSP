@@ -1,3 +1,5 @@
+require 'parser'
+
 describe 'parser' do
   unsorted_array = [
     ['/help_page/1', '126.318.035.038'],
