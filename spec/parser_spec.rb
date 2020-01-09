@@ -72,4 +72,12 @@ describe 'parser' do
   it 'counts unique' do
     expect(parser_object.count_uniq_visits).to eq valid_unique_counted
   end
+
+  it 'sorts counted visits' do
+    expect(
+      parser_object.sort_visits(
+        parser_object.count_visits
+      )
+    ).to eq valid_array_sorted
+  end
 end
